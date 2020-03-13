@@ -51,3 +51,38 @@ y_eval = dfeval.pop('survived')
 # dftrain['class'].value_counts().plot(kind = 'barh')
 # plt.show()
 # print(dftrain['age'].describe())
+pd.concat([dftrain, y_train], axis=1).groupby('sex').survived.mean().plot(kind='barh').set_xlabel('% survive')
+
+
+# cols = dftrain.columns.tolist()
+# print(cols)
+# CATE_COLS = []
+# NUM_COLS = []
+# for i in cols:
+#     print(i)
+#     print(dftrain[i].dtypes)
+
+
+CATEGORICAL_COLUMNS = ['sex', 'n_siblings_spouses', 'parch', 'class', 'deck',
+                       'embark_town', 'alone']
+NUMERIC_COLUMNS = ['age', 'fare']
+
+feature_columns = []
+for feature_name in CATEGORICAL_COLUMNS:
+  vocabulary = dftrain[feature_name].unique()
+  feature_columns.append(tf.feature_column.categorical_column_with_vocabulary_list(feature_name, vocabulary))
+  # print()
+  # print(vocabulary)
+  # print(feature_columns)
+  # x = input()
+
+# print(feature_columns)
+# print()
+
+for feature_name in NUMERIC_COLUMNS:
+  feature_columns.append(tf.feature_column.numeric_column(feature_name, dtype=tf.float32))
+print(feature_columns)  #feature columns
+print()
+
+# for i in feature_columns:
+#     print(i)
