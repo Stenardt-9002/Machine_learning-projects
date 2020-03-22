@@ -91,6 +91,10 @@
 #GPU development
 # https://www.tensorflow.org/tutorials/estimator/linear
 from __future__ import absolute_import, division, print_function, unicode_literals
+import time
+start_time = time.time()
+
+from sklearn.metrics import roc_curve
 
 import os
 import sys
@@ -182,10 +186,26 @@ result = linear_est.evaluate(eval_input_fn)
 
 clear_output()
 # print(linear_est)
-# print(result)
+print(result)
 # tf.data.Dataset
 
 
+# estimat how many people with actual survival rate made it?
+# survived_class = []
+# for i in range(len(y_eval)):
+#   if (result[i]["probabilities"][1])>.5:
+#     survived_class.append(1)
+#   else:
+#         survived_class.append(0)
+
+# answer1 = []
+# for i in range(len(survived_class)):
+#   if y_eval.loc[i] == survived_class[i]:
+#     answer1.append(1)
+#   else:
+#     answer1.append(0)
+
+# print(answer1)
 
 
 #predict
@@ -198,4 +218,44 @@ result1 = list(linear_est.predict(eval_input_fn))
 print(result1[6]["probabilities"]) #6 not survived
 print(dfeval.loc[6])
 print(y_eval.loc[6])
+
+
+#no visualisation beACUSE multiple features
+# Now you reached an accuracy of 75%. Using each base feature column separately may not be enough to explain the data. For example, the correlation between gender and the label may be different for different gender. Therefore, if you only learn a single model weight for gender="Male" and gender="Female", you won't capture every age-gender combination (e.g. distinguishing between gender="Male" AND age="30" AND gender="Male" AND age="40").
+
+# To learn the differences between different feature combinations, you can add crossed feature columns to the model (you can also bucketize age column before the cross column):
+
+#adding cross feature column
+age_x_gender = tf.feature_column.crossed_column(['age', 'sex'], hash_bucket_size=100)
+
+derived_feature_columns = [age_x_gender]
+linear_est = tf.estimator.LinearClassifier(feature_columns=feature_columns+derived_feature_columns) #addition of crossed feature columns
+linear_est.train(train_input_fn)
+result = linear_est.evaluate(eval_input_fn)
+
+clear_output()
+print(result)
+
+
+
+pred_dicts = list(linear_est.predict(eval_input_fn))
+probs = pd.Series([pred['probabilities'][1] for pred in pred_dicts])
+
+# probs.plot(kind='hist', bins=20, title='predicted probabilities')
+# plt.show() #not understood
+print(probs)
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
+# fpr, tpr, _ = roc_curve(y_eval, probs)
+# plt.plot(fpr, tpr)
+# plt.title('ROC curve')
+# plt.xlabel('false positive rate')
+# plt.ylabel('true positive rate')
+# plt.xlim(0,)
+# plt.ylim(0,)
+
+# plt.show()
+#estimating threashold for probability before making decision
+
 
