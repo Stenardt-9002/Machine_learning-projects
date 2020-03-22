@@ -1,0 +1,40 @@
+[2K[2K{'accuracy': 0.7121212, 'accuracy_baseline': 0.625, 'auc': 0.8125804, 'auc_precision_recall': 0.7575366, 'average_loss': 0.6523951, 'label/mean': 0.375, 'loss': 0.65499413, 'precision': 0.5839416, 'prediction/mean': 0.5771604, 'recall': 0.8080808, 'global_step': 200}
+[0.7919157  0.20808426]
+sex                          male
+age                            35
+n_siblings_spouses              0
+parch                           0
+fare                         8.05
+class                       Third
+deck                      unknown
+embark_town           Southampton
+alone                           y
+Name: 0, dtype: object
+0
+OOOXVDOOXDVODSOV
+[0.26646644 0.7335335 ]
+sex                        female
+age                             8
+n_siblings_spouses              3
+parch                           1
+fare                       21.075
+class                       Third
+deck                      unknown
+embark_town           Southampton
+alone                           n
+Name: 6, dtype: object
+0
+[2K[2K{'accuracy': 0.7651515, 'accuracy_baseline': 0.625, 'auc': 0.85084176, 'auc_precision_recall': 0.7731816, 'average_loss': 0.4810316, 'label/mean': 0.375, 'loss': 0.47318274, 'precision': 0.72289157, 'prediction/mean': 0.31590793, 'recall': 0.6060606, 'global_step': 200}
+0      0.063698
+1      0.167258
+2      0.464216
+3      0.448271
+4      0.160442
+         ...   
+259    0.670050
+260    0.047230
+261    0.320330
+262    0.176845
+263    0.325941
+Length: 264, dtype: float64
+--- 18.924691677093506 seconds ---
