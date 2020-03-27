@@ -1,0 +1,6 @@
+[NumericColumn(key='SepalLength', shape=(1,), default_value=None, dtype=tf.float32, normalizer_fn=None), NumericColumn(key='SepalWidth', shape=(1,), default_value=None, dtype=tf.float32, normalizer_fn=None), NumericColumn(key='PetalLength', shape=(1,), default_value=None, dtype=tf.float32, normalizer_fn=None), NumericColumn(key='PetalWidth', shape=(1,), default_value=None, dtype=tf.float32, normalizer_fn=None)]
+
+Test set accuracy: 0.600
+
+{'accuracy': 0.6, 'average_loss': 0.63502765, 'loss': 0.63502765, 'global_step': 5000}
+SepalLength: SepalWidth: PetalLength: PetalWidth: Prediction is Virginica(0.4612%) 
