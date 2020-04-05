@@ -11,7 +11,8 @@
 # Horse
 # Ship
 # Truck
-
+import time 
+a1 = time.time()
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import datasets,layers,models
@@ -51,3 +52,4 @@ hist1ory = mode1l.fit(train_images_norm,train_label,epochs = 10,validation_data=
 
 test_loss,test_acc1 = mode1l.evaluate(test_images_norm,test_labale,verbose=3)
 print(test_acc1)
+print(time.time()-a1)
