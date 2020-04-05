@@ -3,3 +3,4 @@ data Stackoverflow 2019
 *.csv
 *.pdf
 developerdat/
+*.json
