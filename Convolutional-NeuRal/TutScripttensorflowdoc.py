@@ -1,4 +1,16 @@
 # https://www.tensorflow.org/tutorials/images/transfer_learning
+
+
+
+
+# NOTE NO NOEED TO RUN THIS CODE AGAIN
+# load the saved model using
+# filmodel = tf.keras.models.load_model('saved_modelforcattest\my_model1')
+
+
+
+
+
 import os
 
 import numpy as np
@@ -121,7 +133,12 @@ print("initial accuracy: {:.2f}".format(accuracy0))
 filmodel = model.fit(trained_bitches,
                     epochs=initial_epochs,
                     validation_data=validation_bitches)
+model.save('saved_modelforcattest\my_model1') 
+loss0,accuracy0 = filmodel.evaluate(validation_bitches, steps = validation_steps)
 
+
+print("initial loss: {:.2f}".format(loss0))
+print("initial accuracy: {:.2f}".format(accuracy0))
 
 acc = filmodel.history['accuracy']
 val_acc = filmodel.history['val_accuracy']
