@@ -1,0 +1,6 @@
+#VARIABLES not in path
+ACCESS_TOKEN = ""
+ACCESS_TOKEN_SECRET = ""
+CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
+This_test = "Ok"
