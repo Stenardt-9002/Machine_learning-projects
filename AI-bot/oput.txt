@@ -1,0 +1,36 @@
+words_lot =  ['Hi', 'How', 'are', 'you', 'Is', 'anyone', 'there', '?', 'Hello', 'Good', 'day', 'Whats', 'up', 'cya', 'See', 'you', 'later', 'Goodbye', 'I', 'am', 'Leaving', 'Have', 'a', 'Good', 'day', 'how', 'old', 'how', 'old', 'is', 'tim', 'what', 'is', 'your', 'age', 'how', 'old', 'are', 'you', 'age', '?', 'what', 'is', 'your', 'name', 'what', 'should', 'I', 'call', 'you', 'whats', 'your', 'name', '?', 'Id', 'like', 'to', 'buy', 'something', 'whats', 'on', 'the', 'menu', 'what', 'do', 'you', 'reccommend', '?', 'could', 'i', 'get', 'something', 'to', 'eat', 'when', 'are', 'you', 'guys', 'open', 'what', 'are', 'your', 'hours', 'hours', 'of', 'operation']
+
+
+
+
+
+doc_x =  [['Hi'], ['How', 'are', 'you'], ['Is', 'anyone', 'there', '?'], ['Hello'], ['Good', 'day'], ['Whats', 'up'], ['cya'], ['See', 'you', 'later'], ['Goodbye'], ['I', 'am', 'Leaving'], ['Have', 'a', 'Good', 'day'], ['how', 'old'], ['how', 'old', 'is', 'tim'], ['what', 'is', 'your', 'age'], ['how', 'old', 'are', 'you'], ['age', '?'], ['what', 'is', 'your', 'name'], ['what', 'should', 'I', 'call', 'you'], ['whats', 'your', 'name', '?'], ['Id', 'like', 'to', 'buy', 'something'], ['whats', 'on', 'the', 'menu'], ['what', 'do', 'you', 'reccommend', '?'], ['could', 'i', 'get', 'something', 'to', 'eat'], ['when', 'are', 'you', 'guys', 'open'], ['what', 'are', 'your', 'hours'], ['hours', 'of', 'operation']]
+
+
+
+
+
+doc_y =  ['greeting', 'greeting', 'greeting', 'greeting', 'greeting', 'greeting', 'goodbye', 'goodbye', 'goodbye', 'goodbye', 'goodbye', 'age', 'age', 'age', 'age', 'age', 'name', 'name', 'name', 'shop', 'shop', 'shop', 'shop', 'hours', 'hours', 'hours']
+
+
+
+
+
+labels_lot =  ['greeting', 'goodbye', 'age', 'name', 'shop', 'hours']
+
+
+
+
+
+
+
+
+
+
+words =  ['a', 'ag', 'am', 'anyon', 'ar', 'buy', 'cal', 'could', 'cya', 'day', 'do', 'eat', 'get', 'good', 'goodby', 'guy', 'hav', 'hello', 'hi', 'hour', 'how', 'i', 'id', 'is', 'lat', 'leav', 'lik', 'menu', 'nam', 'of', 'old', 'on', 'op', 'reccommend', 'see', 'should', 'someth', 'the', 'ther', 'tim', 'to', 'up', 'what', 'when', 'yo', 'you']
+
+
+
+
+
+labelsnew =  ['age', 'goodbye', 'greeting', 'hours', 'name', 'shop']
