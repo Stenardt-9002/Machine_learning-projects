@@ -15,7 +15,11 @@ def preprocessing(img):
 
 def action(driver):
     sct = mss()
-    count = 0
+    with open('Recordnoimages.txt', 'r') as csv1:
+        count = (int)(csv1.read())
+
+    
+    # count = 0
     time.sleep(2)
     # coordinates = {
     #     'top': 180,
@@ -26,10 +30,10 @@ def action(driver):
     coordinates = {
         'top': 400,
         'left': 0,
-        'width': 1000,
+        'width': 600,
         'height': 600,
     }
-    with open('recordinput.csv', 'w') as csv:
+    with open('recordinput.csv', 'a') as csv:
         if not os.path.exists(r'./images'):
             os.mkdir(r'./images')
 
@@ -55,17 +59,22 @@ def action(driver):
             #     count += 1
 
 
-
+            elif keyboard.is_pressed('t'):
+                cv2.imwrite('./images/frame_{0}.jpg'.format(count), img)
+                csv.write('0\n')
+                print('nothing')
+                # cpaturing nothing
+                count += 1
 
 
             #else scenario 
 
             #  if keyboard.is_pressed('t'):
-            else:
-                cv2.imwrite('./images/frame_{0}.jpg'.format(count), img)
-                csv.write('0\n')
-                print('nothing')
-                count += 1
+            # else:
+            #     cv2.imwrite('./images/frame_{0}.jpg'.format(count), img)
+            #     csv.write('0\n')
+            #     print('nothing')
+            #     count += 1
 
 
 
