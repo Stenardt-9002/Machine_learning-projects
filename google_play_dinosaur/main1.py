@@ -13,3 +13,6 @@ time.sleep(2)
 page = driver.find_element_by_class_name('offline')
 
 page.send_keys(u'\ue00d')
+
+
+

@@ -21,6 +21,18 @@ with open ('../recordinput.csv', 'r') as f:
         Y.append(line.rstrip())
 
 
+#collab link https://drive.google.com/open?id=16Rb2aW9bHBtNFihPBnH_fbDXt0Re7Gru
+
+# id 16Rb2aW9bHBtNFihPBnH_fbDXt0Re7Gru
+
+
+#collab link https://drive.google.com/open?id=1rXsrhX6YK9JkmAg4kZi3dyDwkGUri85F
+#id 1rXsrhX6YK9JkmAg4kZi3dyDwkGUri85F
+
+#new collab link https://drive.google.com/open?id=1i_ifOMGLUMCsl5wG_veMa7kTGjNegKTx
+#id 1i_ifOMGLUMCsl5wG_veMa7kTGjNegKTx
+
+
 all_images = []
 img_num = 53
 # img_num = 0
@@ -60,9 +72,15 @@ X = np.array(all_images)
 # print(X.shape)
 # print(len(Y))
 # Y = Y[:(int)(get_max_image)-20]
-Y = Y[:X[0].shape[0]]
-print(len(Y))
-print()
+# Y = Y[:X[0].shape[0]]
+Y = Y[53:]
+Y = Y[:-20]
+# X = X[53:]
+# print(len(Y))
+# print(X.shape)
+# print()
+# print()
+
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=.2, random_state=5)
 
 ## input image dimensions
@@ -80,7 +98,7 @@ model = Sequential()
 model.add(Conv2D(100, kernel_size=(2, 2), strides=(2, 2), activation='relu', input_shape=input_shape))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
-model.add(Dense(250, activation='relu'))
+model.add(Dense(350, activation='relu'))
 model.add(Dense(classifications, activation='softmax'))
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=['accuracy'])
 
