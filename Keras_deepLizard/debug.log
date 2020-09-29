@@ -1,0 +1,12 @@
+[0928/225840.180:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0928/225840.185:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0928/230840.203:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0928/230840.203:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0928/230840.203:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0928/230840.203:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0928/231340.190:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0928/231340.190:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0928/232840.214:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0928/232840.214:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0928/234340.225:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0928/234340.225:ERROR:crash_report_database_win.cc(447)] failed to read records
