@@ -10,3 +10,11 @@
 [0928/232840.214:ERROR:crash_report_database_win.cc(447)] failed to read records
 [0928/234340.225:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
 [0928/234340.225:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0928/235840.263:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0928/235840.263:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0929/001340.282:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0929/001340.282:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0929/002840.304:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0929/002840.304:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0929/004340.310:ERROR:file_io.cc(90)] ReadExactly: expected 784, observed 0
+[0929/004340.310:ERROR:crash_report_database_win.cc(447)] failed to read records
